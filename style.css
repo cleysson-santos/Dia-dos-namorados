@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#121212;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Seções */
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    padding:20px;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(to bottom,#1db954,#121212);
+}
+
+.album{
+    width:300px;
+    height:300px;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+.song{
+    margin-top:20px;
+    text-align:center;
+}
+
+.song h1{
+    font-size:2rem;
+}
+
+.song p{
+    color:#b3b3b3;
+    margin-top:10px;
+}
+
+#playBtn{
+    margin-top:15px;
+    background:#1DB954;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:16px;
+}
+
+/* CARROSSEL */
+.carousel-section{
+    padding:0;
+}
+
+.carousel{
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+}
+
+.slides{
+    display:flex;
+    width:400%;
+    height:100%;
+    transition:.8s;
+}
+
+.slide{
+    width:100vw;
+    height:100vh;
+    flex-shrink:0;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* CONTADOR */
+.counter{
+    text-align:center;
+}
+
+.counter h2{
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.box{
+    background:#1e1e1e;
+    padding:25px;
+    border-radius:15px;
+    min-width:140px;
+}
+
+.box span{
+    display:block;
+    font-size:2.5rem;
+    color:#1db954;
+    font-weight:bold;
+}
+
+/* MENSAGEM */
+.message{
+    max-width:800px;
+    text-align:center;
+    line-height:1.8;
+}
+
+.message h2{
+    color:#1db954;
+    margin-bottom:30px;
+    font-size:2.5rem;
+}
+
+.message p{
+    font-size:1.2rem;
+}
+
+.heart{
+    font-size:4rem;
+    margin-top:30px;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.15);
+    }
+}
+
+@media(max-width:768px){
+
+    .album{
+        width:250px;
+        height:250px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .song h1{
+        font-size:1.5rem;
+    }
+}
